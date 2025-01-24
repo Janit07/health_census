@@ -1,9 +1,9 @@
 const addPatientButton = document.getElementById("addPatient");
 const report = document.getElementById("report");
 const btnSearch = document.getElementById("btnSearch");
-const patients=[];
+const patients = [];
 
-function addPatient() {
+function addPatientreport() {
             const name=document.getElementById('name').value;
             const gender=document.getElementById('input[name="gender"]:checked');
             const age= document.getElementById("age").value;
@@ -26,19 +26,19 @@ function resetForm() {
 function generateReport() {
             const numPatients = patients.length;
             const conditionsCount={
-                Diabetes: 0,
-                Thyroid: 0,
+                "Diabetes": 0,
+                "Thyroid": 0,
                 "High Blood Pressure": 0,
             };
             const genderConditionsCount={
                 Male: {
-                    Diabetes:0,
-                    Thyroid: 0,
+                    "Diabetes":0,
+                    "Thyroid": 0,
                     "High Blood Pressure":0,
                 },
                 Female:{
-                    Diabetes:0,
-                    Thyroid: 0,
+                    "Diabetes":0,
+                    "Thyroid": 0,
                     "High Blood Pressure":0,
                 },
             };
@@ -65,7 +65,7 @@ function generateReport() {
             }
 }
 
-addPatientButton.addEventListener('click',addPatient);
+addPatientButton.addEventListener("click",addPatientreport);
 
 function searchCondition() {
             const input = document.getElementById('conditionInput').value.toLowerCase();
